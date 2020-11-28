@@ -13,7 +13,7 @@ spec:
   chart:
     git: ssh://git@github.com/gaelletalend/flux-demo
     path: charts/helloworld
-    ref: main
+    ref: master
   values:
     image: "docker.io/khaly/app-node:main-20201125"
     replicaCount: 2
