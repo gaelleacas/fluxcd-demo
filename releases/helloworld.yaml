@@ -1,0 +1,24 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: helloworld
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.chart-image: glob:master-*
+spec:
+  releaseName: helloworld
+  helmVersion: v3
+  chart:
+    git: ssh://git@github.com/gaelletalend/flux-demo
+    path: charts/helloworld
+    ref: master
+  values:
+    image: "docker.io/khaly/app-node:master-20201125"
+    replicaCount: 2
+    extraEnv:
+      message: Hello world !
+    secrets:
+      #mysecret: AgAJmE/KRGH/J6/FKbcolTsukUI0vyjGQYmfKeYaKHcvNhywe69QS9lTpvbLDR08UU+ykUMTrUVFdkYJs4X3cg5igPeNeWFSWKs6pm7l2m/9FDNbL4tMdHctS09GynKY0gl27lGwV/BshhTDcO5pweRRNPc/Jq4dUawt7bDQqzNuqTsSF1N0H8JN3v4jEVj1YXO3OmzusHNvsMJFPftRFBYOKxI9jM5lLQ2+k4LCxQcHxy4yW41a0c6wmItFiyvFCMPE6LnsqeNGxGccjvn89D/SGy/bwGLmFI9nUjRVumNUXm2kOcSNdKeszH7UU1FDJUJRad2G1K82f7xtl6EP1s07Yvws8dVm4kbl3GJXYyaHJni0d5aGmxdcYqHoVrAXhIICUSQl2uyu1PzlDUUMDS9oO5RpXLpApfGrn/UP//GQSHtHHT86+fEXnJg8gneRdcCgsUTj0X/Z1ZNh84WTqtTcDXCkpQVy8h6nSCo1MbZS59NieLBQxTGO8eYeIoUY/Duw6rLIXhvrE4cMSbkDvOWngn4eBN2CV7PBh9gCXyyBiBtpRngFrUnqe4Qw+755BY3dpsvs0+owugCvGYMvSACyoL2YAuvZwR7b8qNdZcFcQzhNBbrT0DfziRWklgGmIq4W1oy+Os8Ka6PJ9MNO9aMo7dfJHHo5Hir7m2/fJv4ihVYWvjzzFkGWexKCwXvyzEE/hu4JNatpcNQmsDl3Y2YElFqwoSir/Kuj
+      mysecret: AgAsfPGodFTc8sAhbXClVli21IfhIv9hqwiTHPZD4X43i1xEE1IQuX06Fj3/tbMUvMtZSxG9DyFDZj75b0mKnFyi/FKre99ErQPu7x8uoO2i6lC6Ty0KFK365ZUUKtzO1CcD8FR42TpdOxtffq7j/1/fHm03u1Zp0cGwnd7xgnIlnDoT6rBHkvfRTe7qyw3C0uqpm+gWR11vzST/YbTRJpgbyR0L7WXfk+XUlBUNxyBuDe+xP3osvjDSSGNTdSxd1raPvlaqygGG4tc1RbrKek1l+nUKgGOXG0dVEf4FYPCyR7+DJYZAf7KS2KctdLREr3fo4GtqDaS8uGnPt/o+bBhS2ET51xRBD/wcb+WoCbpsGvlPf6jJ3558OF3KnqhZ3bW94/D/NMwUDtQ5h6EVhS6ktF9CPioELelBSwvFzPvrgQ4oxnZENwYT/qQVT47iKL/hZspZ4du5gsqjCYcxljiPWWe2oFkt+Sbd4KM1v3zRxlxdH8gC8893FbNtxmE8UTxouLzn17U9z8wZcvs9y5aIyD7+MJXQTaiouZuzcbifaowi8wxSr8enRhOGVJdsPmNCNYQwx8dXFQBuMwQMcdHREJIdzCkGF/YA5bE1WB0iIMWdPNUqmA0Jj/eW0Hes60ahqnZuhUOSnw6cildGmn+Q73dhA1Tc6Jiz7aUP0UCSQXdb0h4nf90tYMS6U+WO3IbP/VShQqgTSw8=

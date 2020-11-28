@@ -1,4 +1,1 @@
-# fluxcd-demo
-Demo of FluxCD &amp; Sealed secret
-
-test
+# flux-demo

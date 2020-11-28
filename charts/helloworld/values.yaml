@@ -1,0 +1,12 @@
+image: docker.io/khaly/app-node:master-20201122
+
+replicaCount: 2
+# hpa:
+#   enabled: true
+#   maxReplicas: 3
+#   cpu: 1
+extraEnv:
+  message: coucou2
+
+secrets:
+  mysecret: "My secret not encrypted"
