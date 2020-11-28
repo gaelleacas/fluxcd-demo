@@ -88,7 +88,7 @@ metadata:
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: glob:master-*
+    fluxcd.io/tag.chart-image: glob:main-*
 spec:
   releaseName: helloworld
   helmVersion: v3
@@ -97,7 +97,7 @@ spec:
     path: charts/helloworld
     ref: master
   values:
-    image: "docker.io/khaly/app-node:master-20201125"
+    image: "docker.io/khaly/app-node:main-20201125"
     replicaCount: 2
     extraEnv:
       message: Hello world !

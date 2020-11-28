@@ -6,16 +6,16 @@ metadata:
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: glob:master-*
+    fluxcd.io/tag.chart-image: glob:main-*
 spec:
   releaseName: helloworld
   helmVersion: v3
   chart:
     git: ssh://git@github.com/gaelletalend/flux-demo
     path: charts/helloworld
-    ref: master
+    ref: main
   values:
-    image: "docker.io/khaly/app-node:master-20201126"
+    image: "docker.io/khaly/app-node:main-20201126"
     replicaCount: 2
     extraEnv:
       message: Hello world !
