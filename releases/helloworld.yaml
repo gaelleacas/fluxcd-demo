@@ -15,7 +15,7 @@ spec:
     path: charts/helloworld
     ref: master
   values:
-    image: "docker.io/khaly/app-node:main-20201128"
+    image: "docker.io/khaly/app-node:main-202011282"
     replicaCount: 2
     extraEnv:
       message: Hello world!
