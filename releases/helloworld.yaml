@@ -18,6 +18,6 @@ spec:
     image: "docker.io/khaly/app-node:main-20201129"
     replicaCount: 2
     extraEnv:
-      message: Hello world!
+      message: Hello Flux!
     secrets:
       mysecret: AgBH+rnJbwiknRGCB8oMI15GwPcv85lzTu5BIpNwEkdlEHG/zuTxjI6ckD/sgfKeZlbuwp+UgAYBHD1W9CdqTdzKjIGWVcPas1nf2lVU4evRat3UtCJZViNZcrMBlrhdN/SQ6jz1cpMPsB+cAbilwl+/0LV1MnhHDNPKDNCtyS/9g1yHTWLOhRTiaxt3JMdTO1PDnNUQN08+cqWKjdjjG5i848RoNRAfvdewXYO6ztvaI6lfGzf2P8CqU9cQYjsMKI5/aZv5LhubfqzSeFeUIXtZEgkHOVBvFMGKKUd/YLT5UQlk7ntZ8LlAM4Edine+YEbNliQLSBlUaji1Z7+Eq8urTa8ymkviEKsfT1kNmdWhKH93aTks1Bqbi08vYVAjqUiZRnScmNkhUN09mTEc0YtxS62Iap2LVpzHtc+nLpB8clJ9mly+UY8Q+fOUnY7PPFVQh0ci7MXcq9TFUQm1NG2L6VFoSdwtipT/QH/vINykLwOFnQ85glwkGHSrneOu+AjK5PdfZdwY0Nj9WioC30uUqkzb99w5nRO5akTjudzrBQ58iOU/YZyx+gAduD0xeD+LJOVcaR36C+mo7B7T7//ukP65yQJrptrH1bXJYdL28N3VcUphIbQK80IVuLCxj++4olTF4Kr1nLFC1f8NAGjjOBHYhxejU6ELAnqH+MrhPkoPbxAdRG5KsudNCidJUtrpchrYiyFR1VHFrHUqUr2j
