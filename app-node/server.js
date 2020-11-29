@@ -12,10 +12,12 @@ app.use(morgan('combined'));
 // Configuration
 var port = process.env.PORT || 8080;
 var message = process.env.MESSAGE || "Hello world!";
+var mysecret = process.env.MYSECRET || "My Secret!";
 
 app.get('/', function (req, res) {
     res.render('home', {
       message: message,
+      mysecret: mysecret,
       platform: os.type(),
       release: os.release(),
       hostName: os.hostname()

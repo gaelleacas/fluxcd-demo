@@ -26,6 +26,17 @@ div.content {
   border-bottom: 2px solid #909090;
 }
 
+.content #secret {
+  margin: 10px 0 50px 0;
+  padding: 30px 0;  
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 32pt;
+  /* background-color: #505050; */
+  /* border-top: 2px solid #909090;
+  border-bottom: 2px solid #909090; */
+}
+
 .content #info {
   margin: 0 auto;
   font-family: 'Ubuntu', sans-serif;
