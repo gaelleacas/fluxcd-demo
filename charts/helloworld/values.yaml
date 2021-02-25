@@ -10,3 +10,6 @@ extraEnv:
 
 secrets:
   mysecret: "My secret not encrypted"
+
+rbac:
+  serviceAccountName: vault
