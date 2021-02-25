@@ -13,7 +13,7 @@ spec:
   chart:
     git: ssh://git@github.com/gaelleacas/fluxcd-demo
     path: charts/helloworld
-    ref: master
+    ref: main
   values:
     image: "docker.io/khaly/app-node:main-20201203"
     replicaCount: 2
