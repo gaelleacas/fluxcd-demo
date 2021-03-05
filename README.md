@@ -33,8 +33,8 @@ kubectl create ns fluxcd
 ```
 $ helm upgrade -i flux fluxcd/flux --wait \
 --namespace fluxcd \
---set git.url=git@github.com:gaelletalend/flux-demo \
---set git.branch=master
+--set git.url=git@github.com:gaelleacas/flux-demo \
+--set git.branch=main
 
 > Release "flux" does not exist. Installing it now.
 NAME: flux
@@ -58,7 +58,7 @@ and running:
   
 * Install the `HelmRelease` Kubernetes CRD
 ```
-kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/master/deploy/crds.yaml
+kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.2.0/deploy/crds.yaml
 ```
 * Install Flux Helm Operator with Helm v3 support: 
 ```
@@ -113,7 +113,7 @@ spec:
 
 * Controller
 ```
-kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.13.1/controller.yaml
+kubectl apply -f kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.15.0/controller.yaml
 ```
 
 * CLI
