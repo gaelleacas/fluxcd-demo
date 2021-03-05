@@ -16,7 +16,7 @@ brew install helm fluxcd
 * Clone your helm chart repository: 
 
 ```
- git@github.com:gaelletalend/flux-demo.git
+ git@github.com:gaelleacas/flux-demo.git
 ```
 * Create the `fluxcd` namespace:
 
@@ -93,9 +93,9 @@ spec:
   releaseName: helloworld
   helmVersion: v3
   chart:
-    git: ssh://git@github.com/gaelletalend/flux-demo
+    git: ssh://git@github.com/gaelleacas/flux-demo
     path: charts/helloworld
-    ref: master
+    ref: main
   values:
     image: "docker.io/khaly/app-node:master-20201125"
     replicaCount: 2
